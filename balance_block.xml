@@ -1,0 +1,408 @@
+<xml xmlns="http://www.w3.org/1999/xhtml" collection="false">
+  <variables>
+    <variable type="" id="UjrXAf2:Gw96lN~q#Z]q">repeat</variable>
+  </variables>
+  <block type="trade" id="xgH69|xFn9=70w.*3Vo@" x="0" y="0">
+    <field name="MARKET_LIST">volidx</field>
+    <field name="SUBMARKET_LIST">random_index</field>
+    <field name="SYMBOL_LIST">R_10</field>
+    <field name="TRADETYPECAT_LIST">callput</field>
+    <field name="TRADETYPE_LIST">risefall</field>
+    <field name="TYPE_LIST">both</field>
+    <field name="CANDLEINTERVAL_LIST">60</field>
+    <field name="TIME_MACHINE_ENABLED">FALSE</field>
+    <field name="RESTARTONERROR">TRUE</field>
+    <statement name="INITIALIZATION">
+      <block type="variables_set" id="hvdwU0WDeB_5HJ_81uqw">
+        <field name="VAR" id="UjrXAf2:Gw96lN~q#Z]q" variabletype="">repeat</field>
+        <value name="VALUE">
+          <block type="logic_boolean" id=":kPKwC+0b$OL(Db_K$vE">
+            <field name="BOOL">FALSE</field>
+          </block>
+        </value>
+        <next>
+          <block type="notify" id="kuvO5]lvD7uDIgTk)t{N">
+            <field name="NOTIFICATION_TYPE">success</field>
+            <field name="NOTIFICATION_SOUND">silent</field>
+            <value name="MESSAGE">
+              <shadow type="text" id="G{U#UX],^$h^wn`ErDke">
+                <field name="TEXT">abc</field>
+              </shadow>
+              <block type="text" id="DGxQ{2*.M(:{]L8%zeB^">
+                <field name="TEXT">=========++++++++=========</field>
+              </block>
+            </value>
+            <next>
+              <block type="notify" id="(3S.r5KA79(E,rkM3C*t">
+                <field name="NOTIFICATION_TYPE">success</field>
+                <field name="NOTIFICATION_SOUND">silent</field>
+                <value name="MESSAGE">
+                  <shadow type="text" id="G{U#UX],^$h^wn`ErDke">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                  <block type="text" id="v/;{oL[-+V:/WcwgRpO[">
+                    <field name="TEXT">=========Run once=========</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="notify" id="ykMnSuZW=p,y*AFm4D%q">
+                    <field name="NOTIFICATION_TYPE">success</field>
+                    <field name="NOTIFICATION_SOUND">silent</field>
+                    <value name="MESSAGE">
+                      <shadow type="text" id="^7n,l:D=8g$FY!Pn(i1!">
+                        <field name="TEXT">abc</field>
+                      </shadow>
+                      <block type="text_join" id="TU4b`T{/c`3l4^!nGOY!">
+                        <mutation items="2"></mutation>
+                        <value name="ADD0">
+                          <block type="text" id="M{Q[b+FLCt0PInjphS:0">
+                            <field name="TEXT">Balance as text:</field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="balance" id="x|C`:e$}9WVe)NwO~7xb">
+                            <field name="BALANCE_TYPE">STR</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="notify" id="I55i_:W@fw:*gl],d%IV">
+                        <field name="NOTIFICATION_TYPE">success</field>
+                        <field name="NOTIFICATION_SOUND">silent</field>
+                        <value name="MESSAGE">
+                          <shadow type="text" id="PU+O[:0NFuEG_(T3RD3b">
+                            <field name="TEXT">abc</field>
+                          </shadow>
+                          <block type="text_join" id="t%WBw%o8k1Yg+nM`bhRq">
+                            <mutation items="2"></mutation>
+                            <value name="ADD0">
+                              <block type="text" id="88T]N`ZE?,Z%0gKJ[k={">
+                                <field name="TEXT">Balance as number:</field>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="balance" id="P0Qv#T/5BxKkc[V(WnHt">
+                                <field name="BALANCE_TYPE">STR</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <statement name="SUBMARKET">
+      <block type="notify" id="F#M)O~@`0s/U~}T}q0,#">
+        <field name="NOTIFICATION_TYPE">success</field>
+        <field name="NOTIFICATION_SOUND">silent</field>
+        <value name="MESSAGE">
+          <shadow type="text" id="G{U#UX],^$h^wn`ErDke">
+            <field name="TEXT">abc</field>
+          </shadow>
+          <block type="text" id="lZm1n[H;at[6ii$MGna^">
+            <field name="TEXT">=========Trade definition=========</field>
+          </block>
+        </value>
+        <next>
+          <block type="notify" id="*xS0k^QRRf$pV?ozJ9=/">
+            <field name="NOTIFICATION_TYPE">success</field>
+            <field name="NOTIFICATION_SOUND">silent</field>
+            <value name="MESSAGE">
+              <shadow type="text" id="^7n,l:D=8g$FY!Pn(i1!">
+                <field name="TEXT">abc</field>
+              </shadow>
+              <block type="text_join" id="?4:3n`h0ms7]Xrt_~dMt">
+                <mutation items="2"></mutation>
+                <value name="ADD0">
+                  <block type="text" id="islk4m@Xv{?)tC:BTRaH">
+                    <field name="TEXT">Balance as text:</field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="balance" id="{7QeP`p*=z]2-7U7CEb.">
+                    <field name="BALANCE_TYPE">STR</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="notify" id="4(pl^F9R(Jo;lLL{%YF~">
+                <field name="NOTIFICATION_TYPE">success</field>
+                <field name="NOTIFICATION_SOUND">silent</field>
+                <value name="MESSAGE">
+                  <shadow type="text" id="PU+O[:0NFuEG_(T3RD3b">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                  <block type="text_join" id="r[~j{2Q`*k7fBCzTxy`X">
+                    <mutation items="2"></mutation>
+                    <value name="ADD0">
+                      <block type="text" id="KTO%a6+V#4OVe:u%B-09">
+                        <field name="TEXT">Balance as number:</field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="balance" id="owa{VZ2_(;p$MUnV@5%{">
+                        <field name="BALANCE_TYPE">STR</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="tradeOptions" id="x=V33~4Lb|(sLv`J[:Eb">
+                    <field name="DURATIONTYPE_LIST">t</field>
+                    <field name="CURRENCY_LIST">USD</field>
+                    <field name="BARRIEROFFSETTYPE_LIST">+</field>
+                    <field name="SECONDBARRIEROFFSETTYPE_LIST">-</field>
+                    <value name="DURATION">
+                      <shadow type="math_number" id="l?:(ODaF{qe4Q?O$85PR">
+                        <field name="NUM">1</field>
+                      </shadow>
+                    </value>
+                    <value name="AMOUNT">
+                      <shadow type="math_number" id="ml)25~7^q}3I9}vjf:%K">
+                        <field name="NUM">1</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="before_purchase" id="i-CIx.(Onm4?ihxzA}Y]" x="0" y="745">
+    <statement name="BEFOREPURCHASE_STACK">
+      <block type="notify" id="7ZH@{Vki/7`!~tG7Cl{_">
+        <field name="NOTIFICATION_TYPE">success</field>
+        <field name="NOTIFICATION_SOUND">silent</field>
+        <value name="MESSAGE">
+          <shadow type="text" id="G{U#UX],^$h^wn`ErDke">
+            <field name="TEXT">abc</field>
+          </shadow>
+          <block type="text" id="Yn:~%6T4Daz9JW@p(`Xr">
+            <field name="TEXT">=========Watch and purchase=========</field>
+          </block>
+        </value>
+        <next>
+          <block type="notify" id="sBNBnTh!r98YBG/2!:=c">
+            <field name="NOTIFICATION_TYPE">success</field>
+            <field name="NOTIFICATION_SOUND">silent</field>
+            <value name="MESSAGE">
+              <shadow type="text" id="^7n,l:D=8g$FY!Pn(i1!">
+                <field name="TEXT">abc</field>
+              </shadow>
+              <block type="text_join" id="^!YGti1K0,:ZnwCn9Gk(">
+                <mutation items="2"></mutation>
+                <value name="ADD0">
+                  <block type="text" id="v?gG^6:W%Q8=cb=HL1#2">
+                    <field name="TEXT">Balance as text:</field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="balance" id="@r0_smjUt+,hL98Rkm5c">
+                    <field name="BALANCE_TYPE">STR</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="notify" id="M1!jZeF9_tHu-c;8}n.f">
+                <field name="NOTIFICATION_TYPE">success</field>
+                <field name="NOTIFICATION_SOUND">silent</field>
+                <value name="MESSAGE">
+                  <shadow type="text" id="^7n,l:D=8g$FY!Pn(i1!">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                  <block type="text_join" id="V}LzDc]Xfest,KF134m)">
+                    <mutation items="2"></mutation>
+                    <value name="ADD0">
+                      <block type="text" id="@vHu+8oy_R(BixW~LEPl">
+                        <field name="TEXT">Balance as number:</field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="balance" id=")8|!~EE@SjDyYrI=H*9(">
+                        <field name="BALANCE_TYPE">STR</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="purchase" id="W6q#Z-I3q3d[d3-`S[dS">
+                    <field name="PURCHASE_LIST">CALL</field>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="during_purchase" id="(4;NieXd}j|Bn!c-YiC|" x="0" y="1017">
+    <statement name="DURING_PURCHASE_STACK">
+      <block type="notify" id="H$j~](0v8wtM!.p3-k3f">
+        <field name="NOTIFICATION_TYPE">success</field>
+        <field name="NOTIFICATION_SOUND">silent</field>
+        <value name="MESSAGE">
+          <shadow type="text" id="G{U#UX],^$h^wn`ErDke">
+            <field name="TEXT">abc</field>
+          </shadow>
+          <block type="text" id="kWv}Ex3d7luVRe+F7Iy0">
+            <field name="TEXT">=========Watch and sell=========</field>
+          </block>
+        </value>
+        <next>
+          <block type="notify" id="(a^TjIvq/0s6n4J]@XG/">
+            <field name="NOTIFICATION_TYPE">success</field>
+            <field name="NOTIFICATION_SOUND">silent</field>
+            <value name="MESSAGE">
+              <shadow type="text" id="^7n,l:D=8g$FY!Pn(i1!">
+                <field name="TEXT">abc</field>
+              </shadow>
+              <block type="text_join" id="CB;!j4G{Fw,s,ZZXjnP5">
+                <mutation items="2"></mutation>
+                <value name="ADD0">
+                  <block type="text" id="+9AH0[%x(e(Bbb(;U^4d">
+                    <field name="TEXT">Balance as text:</field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="balance" id="n^]upbbi6Fttf~*E;Rth">
+                    <field name="BALANCE_TYPE">STR</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="notify" id="f]{I[A7qrS]=Hf5Z(Y$b">
+                <field name="NOTIFICATION_TYPE">success</field>
+                <field name="NOTIFICATION_SOUND">silent</field>
+                <value name="MESSAGE">
+                  <shadow type="text" id="^7n,l:D=8g$FY!Pn(i1!">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                  <block type="text_join" id="UyJ;-qk1n~Cu%z{E|:kL">
+                    <mutation items="2"></mutation>
+                    <value name="ADD0">
+                      <block type="text" id="sb|C`,:eKqpQH_k//Icx">
+                        <field name="TEXT">Balance as number:</field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="balance" id="KH!TGFIB`G{Dy#e0if*=">
+                        <field name="BALANCE_TYPE">STR</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_if" id="8?eYKAW%VczmRXQ-ou3r">
+                    <value name="IF0">
+                      <block type="check_sell" id="M=:_KpEeRAJY_}XTU^8~"></block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="after_purchase" id="D^Jz1^n=2vtZku1vBN@;" x="0" y="1321">
+    <statement name="AFTERPURCHASE_STACK">
+      <block type="notify" id="fikFf$==-wJ(^qDb(wyt">
+        <field name="NOTIFICATION_TYPE">success</field>
+        <field name="NOTIFICATION_SOUND">silent</field>
+        <value name="MESSAGE">
+          <shadow type="text" id="G{U#UX],^$h^wn`ErDke">
+            <field name="TEXT">abc</field>
+          </shadow>
+          <block type="text" id="F-liei#PX]Kw!+%.5/nT">
+            <field name="TEXT">=========Trade again=========</field>
+          </block>
+        </value>
+        <next>
+          <block type="notify" id="mtJ?HIN1^tA{]){[^km;">
+            <field name="NOTIFICATION_TYPE">success</field>
+            <field name="NOTIFICATION_SOUND">silent</field>
+            <value name="MESSAGE">
+              <shadow type="text" id="^7n,l:D=8g$FY!Pn(i1!">
+                <field name="TEXT">abc</field>
+              </shadow>
+              <block type="text_join" id="mXbid.BdF}a{Q-R7}umv">
+                <mutation items="2"></mutation>
+                <value name="ADD0">
+                  <block type="text" id="SGSM~tOW(1|6gL}N3?59">
+                    <field name="TEXT">Balance as text:</field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="balance" id="L=%_5~]-BS-cQ[4r+2;$">
+                    <field name="BALANCE_TYPE">STR</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="notify" id="qcOJ6jVu[yr+9V=7ui`@">
+                <field name="NOTIFICATION_TYPE">success</field>
+                <field name="NOTIFICATION_SOUND">silent</field>
+                <value name="MESSAGE">
+                  <shadow type="text" id="^7n,l:D=8g$FY!Pn(i1!">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                  <block type="text_join" id="hV6)q.hgNWwV0[^)R#Hk">
+                    <mutation items="2"></mutation>
+                    <value name="ADD0">
+                      <block type="text" id="EfkN`]I%CERnTO$`-X8C">
+                        <field name="TEXT">Balance as number:</field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="balance" id="F,@xPHU|)t?WcM@VUYWY">
+                        <field name="BALANCE_TYPE">STR</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_if" id="2k[?n3u]B$Z?E97N{Oz[">
+                    <value name="IF0">
+                      <block type="variables_get" id="g5/FTv)5{c_hPGv78dS2">
+                        <field name="VAR" id="UjrXAf2:Gw96lN~q#Z]q" variabletype="">repeat</field>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="variables_set" id="ZTf:O~.2R}.k0*`GrrH5">
+                        <field name="VAR" id="UjrXAf2:Gw96lN~q#Z]q" variabletype="">repeat</field>
+                        <value name="VALUE">
+                          <block type="logic_boolean" id="m}nyz},:J1mm*aJ$JFaN">
+                            <field name="BOOL">FALSE</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="trade_again" id="c)S|KjoQdXc8l#J@5z3P"></block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
