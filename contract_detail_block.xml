@@ -1,0 +1,317 @@
+<xml xmlns="http://www.w3.org/1999/xhtml" collection="false">
+  <variables></variables>
+  <block type="trade" id="xgH69|xFn9=70w.*3Vo@" x="0" y="0">
+    <field name="MARKET_LIST">volidx</field>
+    <field name="SUBMARKET_LIST">random_index</field>
+    <field name="SYMBOL_LIST">R_10</field>
+    <field name="TRADETYPECAT_LIST">callput</field>
+    <field name="TRADETYPE_LIST">risefall</field>
+    <field name="TYPE_LIST">both</field>
+    <field name="CANDLEINTERVAL_LIST">60</field>
+    <field name="TIME_MACHINE_ENABLED">FALSE</field>
+    <field name="RESTARTONERROR">TRUE</field>
+    <statement name="SUBMARKET">
+      <block type="tradeOptions" id="x=V33~4Lb|(sLv`J[:Eb">
+        <field name="DURATIONTYPE_LIST">t</field>
+        <field name="CURRENCY_LIST">USD</field>
+        <field name="BARRIEROFFSETTYPE_LIST">+</field>
+        <field name="SECONDBARRIEROFFSETTYPE_LIST">-</field>
+        <value name="DURATION">
+          <shadow type="math_number" id=";M;|jq8JA_/oty%@_gP|">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+        <value name="AMOUNT">
+          <shadow type="math_number" id="ml)25~7^q}3I9}vjf:%K">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="before_purchase" id="i-CIx.(Onm4?ihxzA}Y]" x="0" y="403">
+    <statement name="BEFOREPURCHASE_STACK">
+      <block type="purchase" id="W6q#Z-I3q3d[d3-`S[dS">
+        <field name="PURCHASE_LIST">CALL</field>
+      </block>
+    </statement>
+  </block>
+  <block type="during_purchase" id="(4;NieXd}j|Bn!c-YiC|" x="0" y="511">
+    <statement name="DURING_PURCHASE_STACK">
+      <block type="controls_if" id="8?eYKAW%VczmRXQ-ou3r">
+        <value name="IF0">
+          <block type="check_sell" id="M=:_KpEeRAJY_}XTU^8~"></block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="after_purchase" id="D^Jz1^n=2vtZku1vBN@;" x="0" y="651">
+    <statement name="AFTERPURCHASE_STACK">
+      <block type="notify" id="iPo{XhtcbJR-_kp|HABV">
+        <field name="NOTIFICATION_TYPE">success</field>
+        <field name="NOTIFICATION_SOUND">silent</field>
+        <value name="MESSAGE">
+          <shadow type="text" id="k.$#UBpAV`AyiHn~KnBz">
+            <field name="TEXT">abc</field>
+          </shadow>
+          <block type="text_join" id="C@Y)Oy$y!lSKrOS%bp(x">
+            <mutation items="2"></mutation>
+            <value name="ADD0">
+              <block type="text" id="NCvpZ|~PH_Hl+7=SAu?U">
+                <field name="TEXT">Statement:</field>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="read_details" id="un$rf5g}7^7}hOLQEwV3">
+                <field name="DETAIL_INDEX">1</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="notify" id="-,CIpW8P,Ffu^2bSE1.Z">
+            <field name="NOTIFICATION_TYPE">success</field>
+            <field name="NOTIFICATION_SOUND">silent</field>
+            <value name="MESSAGE">
+              <shadow type="text" id="oTu6w9w$.0`*@$Pbwo}3">
+                <field name="TEXT">abc</field>
+              </shadow>
+              <block type="text_join" id="al(v`.B@UYXb/{)V=0T$">
+                <mutation items="2"></mutation>
+                <value name="ADD0">
+                  <block type="text" id="f21!P-n9sV05SA)aXP|y">
+                    <field name="TEXT">Ask:</field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="read_details" id=",bQ2QfP,D/r|yu_JfblA">
+                    <field name="DETAIL_INDEX">2</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="notify" id="KG;7:53%3EIR-ZfSMjX%">
+                <field name="NOTIFICATION_TYPE">success</field>
+                <field name="NOTIFICATION_SOUND">silent</field>
+                <value name="MESSAGE">
+                  <shadow type="text" id="1)tMJo1Cz2F#+%5R6.T(">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                  <block type="text_join" id="W*bpAZ#/_pggHBr;m~:@">
+                    <mutation items="2"></mutation>
+                    <value name="ADD0">
+                      <block type="text" id="vYCqF*mUudZDq$3Q_(wp">
+                        <field name="TEXT">Payout:</field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="read_details" id="`cBs3#zB`G[M%9^^H-7/">
+                        <field name="DETAIL_INDEX">3</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="notify" id="r=m~}4|/mYen2GkaE[!Q">
+                    <field name="NOTIFICATION_TYPE">success</field>
+                    <field name="NOTIFICATION_SOUND">silent</field>
+                    <value name="MESSAGE">
+                      <shadow type="text" id="nKO;(fHC];Ld?V*YRc,]">
+                        <field name="TEXT">abc</field>
+                      </shadow>
+                      <block type="text_join" id="_a;jr:.Tk.+@hN~iJMn)">
+                        <mutation items="2"></mutation>
+                        <value name="ADD0">
+                          <block type="text" id="rZ@uRZUVV1=o~L09.loL">
+                            <field name="TEXT">Profit:</field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="read_details" id="Dwqq1URx(o~5llObEigs">
+                            <field name="DETAIL_INDEX">4</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="notify" id="vEOD]jB5IY@%(5lC7Rtc">
+                        <field name="NOTIFICATION_TYPE">success</field>
+                        <field name="NOTIFICATION_SOUND">silent</field>
+                        <value name="MESSAGE">
+                          <shadow type="text" id="m#7GZ@=,`pU#,:O@7W[c">
+                            <field name="TEXT">abc</field>
+                          </shadow>
+                          <block type="text_join" id=")r!JdI7!ZLn$;OokjhLI">
+                            <mutation items="2"></mutation>
+                            <value name="ADD0">
+                              <block type="text" id="ONKvLM)7lViIUYB=po!j">
+                                <field name="TEXT">Contract type:</field>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="read_details" id="tx3fi);vo^=vz%VEJ-af">
+                                <field name="DETAIL_INDEX">5</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="notify" id="Rigz6(arp0v]v)~?hWjq">
+                            <field name="NOTIFICATION_TYPE">success</field>
+                            <field name="NOTIFICATION_SOUND">silent</field>
+                            <value name="MESSAGE">
+                              <shadow type="text" id="^GKiXSd+PL:$Y8q?1O=o">
+                                <field name="TEXT">abc</field>
+                              </shadow>
+                              <block type="text_join" id="~Ud$qQ9a@;-_Yoc3(=1C">
+                                <mutation items="2"></mutation>
+                                <value name="ADD0">
+                                  <block type="text" id="u(vLezWk!qt%{Z4(.,KF">
+                                    <field name="TEXT">Entry spot:</field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block type="read_details" id="tU]V?,gzTiT7LHr*1D^(">
+                                    <field name="DETAIL_INDEX">6</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="notify" id="^xgYmr=mFrYQe-C:Z++r">
+                                <field name="NOTIFICATION_TYPE">success</field>
+                                <field name="NOTIFICATION_SOUND">silent</field>
+                                <value name="MESSAGE">
+                                  <shadow type="text" id="-9,2FjI#hGnAqas5iFfo">
+                                    <field name="TEXT">abc</field>
+                                  </shadow>
+                                  <block type="text_join" id="6tscJnQW-v*@2Bi`5_S%">
+                                    <mutation items="2"></mutation>
+                                    <value name="ADD0">
+                                      <block type="text" id="x#tyYGCEB}lK*A=?2Ft!">
+                                        <field name="TEXT">Entry value:</field>
+                                      </block>
+                                    </value>
+                                    <value name="ADD1">
+                                      <block type="read_details" id="D*srIg#j^01cqQY4|J=J">
+                                        <field name="DETAIL_INDEX">7</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="notify" id="/P:Zd};hflZNhvL(u)w,">
+                                    <field name="NOTIFICATION_TYPE">success</field>
+                                    <field name="NOTIFICATION_SOUND">silent</field>
+                                    <value name="MESSAGE">
+                                      <shadow type="text" id="_Fdy$VkJlF#qVOLvlw)t">
+                                        <field name="TEXT">abc</field>
+                                      </shadow>
+                                      <block type="text_join" id="@XKk);ORL-dYbay(ccj2">
+                                        <mutation items="2"></mutation>
+                                        <value name="ADD0">
+                                          <block type="text" id="N(:.4qN.fkU!QKen?e~}">
+                                            <field name="TEXT">Exit value:</field>
+                                          </block>
+                                        </value>
+                                        <value name="ADD1">
+                                          <block type="read_details" id=":`nF||RpqY(k#.{b#GjI">
+                                            <field name="DETAIL_INDEX">8</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="notify" id="s~.0Q,Qg_qQ[QdUD{hqy">
+                                        <field name="NOTIFICATION_TYPE">success</field>
+                                        <field name="NOTIFICATION_SOUND">silent</field>
+                                        <value name="MESSAGE">
+                                          <shadow type="text" id="ziinXc,AKd,$cvQz[EG_">
+                                            <field name="TEXT">abc</field>
+                                          </shadow>
+                                          <block type="text_join" id="dyM:K??P+VRetTQG9-2~">
+                                            <mutation items="2"></mutation>
+                                            <value name="ADD0">
+                                              <block type="text" id="($^-+V54Zv5#zrO%0fIL">
+                                                <field name="TEXT">Exit value:</field>
+                                              </block>
+                                            </value>
+                                            <value name="ADD1">
+                                              <block type="read_details" id="^}Lh^^)zvTY4%3mcTp7r">
+                                                <field name="DETAIL_INDEX">9</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="notify" id=";eu^S($VgB#*P/09sl.t">
+                                            <field name="NOTIFICATION_TYPE">success</field>
+                                            <field name="NOTIFICATION_SOUND">silent</field>
+                                            <value name="MESSAGE">
+                                              <shadow type="text" id="F$3POM4*x2g?Jg,LS?v;">
+                                                <field name="TEXT">abc</field>
+                                              </shadow>
+                                              <block type="text_join" id="*WCDC%8Y$P`Qv;ZffV/#">
+                                                <mutation items="2"></mutation>
+                                                <value name="ADD0">
+                                                  <block type="text" id="l`YhGZdP|}qfUzow~YVu">
+                                                    <field name="TEXT">Barrier:</field>
+                                                  </block>
+                                                </value>
+                                                <value name="ADD1">
+                                                  <block type="read_details" id="F.~t[F}79A2a7dMwDM%a">
+                                                    <field name="DETAIL_INDEX">10</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="notify" id="wylU}C1aOPDQ3`Zki@}e">
+                                                <field name="NOTIFICATION_TYPE">success</field>
+                                                <field name="NOTIFICATION_SOUND">silent</field>
+                                                <value name="MESSAGE">
+                                                  <shadow type="text" id=":X#QA.a7.b~Ix-WT`hAN">
+                                                    <field name="TEXT">abc</field>
+                                                  </shadow>
+                                                  <block type="text_join" id="In_~=f/MrC(WxZtH]43,">
+                                                    <mutation items="2"></mutation>
+                                                    <value name="ADD0">
+                                                      <block type="text" id="S!Bn~LH$tspz;U-N606{">
+                                                        <field name="TEXT">Result:</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="ADD1">
+                                                      <block type="read_details" id="Zj=|FEl9{TGVRhF7Zuzs">
+                                                        <field name="DETAIL_INDEX">11</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="trade_again" id="c)S|KjoQdXc8l#J@5z3P"></block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
